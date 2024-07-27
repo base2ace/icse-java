@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #4d3275;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-left: 5px solid #4d3275;
+            overflow-x: auto;
+            white-space: pre-wrap; /* Allows text to wrap */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .variable-description th {
+            background-color: #eee;
+        }
+
+        code {
+            <!-- background-color: #f9f2f4; -->
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Section 1: Problem Statement -->
+        <section>
+            <h1>Problem Statement: Check whether the given number is Prime Number.</h1>
+            <p>A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+               The task is to write a Java program that determines if a given number is prime or not.</p>
+        </section>
+
+        <!-- Section 2: Java Program -->
+        <section>
+            <h2>Java Program</h2>
+            <pre>
+<code>
+public class PrimeChecker {
+    // Method to check if a number is prime
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false; // Numbers less than or equal to 1 are not prime
+        }
+        // Check divisibility from 2 to the square root of the number
+        for (int i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                return false; // Number is divisible by another number, not prime
+            }
+        }
+        return true; // Number is prime
+    }
+
+    public static void main(String[] args) {
+        int number = 29; // Example number to check
+        // Check if the number is prime and print the result
+        if (isPrime(number)) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
+        }
+    }
+}
+</code>
+            </pre>
+        </section>
+
+        <!-- Section 3: Program Output -->
+        <section>
+            <h2>Output</h2>
+            <p>Here is an example of how the program is executed and the output it generates:</p>
+            <pre>
+<code>
+29 is a prime number.
+</code>
+            </pre>
+            <p>When the program runs, it checks whether the specified number (in this case, <code>29</code>) is a prime number. Since 29 is only divisible by 1 and itself, the program outputs that it is a prime number.</p>
+        </section>
+
+        <!-- Section 4: Program Description -->
+        <section>
+            <h2>Program Description</h2>
+            <p>This Java program checks if a given integer is a prime number. It uses a method named <code>isPrime</code> which takes an integer as input and returns a boolean value indicating whether the number is prime. The program checks divisibility from 2 up to the square root of the number to determine if it has any divisors other than 1 and itself.</p>
+        </section>
+
+        <!-- Section 5: Variable Description -->
+        <section>
+            <h2>Variable Description</h2>
+            <table class="variable-description">
+                <thead>
+                    <tr>
+                        <th>Name of the Variable</th>
+                        <th>Data Type</th>
+                        <th>Purpose/Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>number</td>
+                        <td>int</td>
+                        <td>The number to check for primality.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>

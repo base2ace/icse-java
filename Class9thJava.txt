@@ -1,0 +1,101 @@
+1. Introduction to Object Oriented Programming concepts.
+	a. Principles of Object Oriented Programming.
+	b. Difference between Procedure Oriented and Object oriented.
+	c. All the four principles of Object Oriented Programming.
+		Data abstraction 
+		Inheritance
+		Polymorphism,
+		Encapsulation
+	d. Introduction to JAVA- Types of java programs.
+		Applets 
+		Applications.
+	e.  Java compilation process.
+			Java Source code.
+			Byte code
+			Object code
+			Java Virtual Machine (JVM)
+	f.  Develop logical and analytical thinking so that students
+		can easily solve interactive programs.
+
+2. Elementary Concept of Objects and Classes.
+	a. Object factory.
+	b  Method calls between objects.
+	c. Objects encapsulate state (attributes) and have behaviour (methods).
+	d. Class as a user defined data type.
+	
+3. Values and data types.
+	a. Character set, ASCII code, Unicode
+	b. Escape sequences [\n, \t, \\, \”, \’].
+	c. Tokens and its types [keywords, identifiers, literals, punctuators,operators]
+    d. Primitive types and non-primitive types.
+	e. Implicit type conversion and Explicit type conversion.
+	
+ 4. Operators in Java
+	a. Forms of operators.
+			Unary
+			Binary
+			Ternary
+	b. Types of operators 
+			Arithmetic
+			Relational
+			Logical
+			Assignment
+			Increment
+			Decrement
+			Short hand operators
+	c. Counters
+	d. Accumulators
+	e. Hierarchy of operators
+	f. ‘new’ operator.
+	g. dot ( . ) operator.
+	h. Prefix and Postfix Notations.
+
+5. Input in Java.
+	a. Initialization
+	b. Introduction to packages.
+	c. Input streams (Scanner Class).
+	d. Types of errors.
+	e. Types of comments.
+
+6. Mathematical Library Methods.
+	a. Introduction to package java.lang
+	b. methods of Math class.
+			pow(x,y)
+			sqrt(x)
+			cbrt(x)
+			ceil(x)
+			floor(x)
+			round x)
+			abs(a)
+			max(a, b)
+			min(a,b)
+			random( ).
+	c. Java expressions– using all the operators and methods of Math class.
+	
+7. Conditional constructs in Java Application.
+	a. Types of conditional constructs.
+			if
+			if else
+			if else if ladder
+			switch-case
+			default
+			break.
+	b. Menu driven programs.
+
+8. Iterative constructs in Java.
+   a. Types of looping statements
+			for
+			while
+		    do while
+   b. Programs with the concepts of loops.
+   c. Nested for loops.
+
+9. Computing and Ethics.
+	a. Ethical Issues in Computing.
+	b. Intellectual property rights.
+	c. Protection of individual’s right to privacy.
+	d. Data protection on the internet.
+	e. Protection against Spam.
+	f. Software piracy, cybercrime, hacking.
+	g. Protection against malicious intent and malicious code. 
+

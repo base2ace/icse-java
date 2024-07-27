@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .download-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+        .locked-btn {
+            background-color: #f44336;
+            color: white;
+            position: relative;
+        }
+        .locked-btn:hover {
+            background-color: #e7352c;
+        }
+        .locked-btn::after {
+            content: '\1F512'; /* Unicode for lock icon */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .button-container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Files for Download</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Download File 1</th>
+                <th>Download File 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2019</td>
+                <td class="button-container"><a href="files/2019_file1.txt" download><button class="download-btn">Download</button></a></td>
+                <td class="button-container"><a href="files/2019_file2.txt" download><button class="download-btn">Download</button></a></td>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td class="button-container"><a href="files/2020_file1.txt" download><button class="locked-btn">Download</button></a></td>
+                <td class="button-container"><a href="files/2020_file2.txt" download><button class="locked-btn">Download</button></a></td>
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td class="button-container"><a href="files/2021_file1.txt" download><button class="locked-btn">Download</button></a></td>
+                <td class="button-container"><a href="files/2021_file2.txt" download><button class="locked-btn">Download</button></a></td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td class="button-container"><a href="files/2022_file1.txt" download><button class="locked-btn">Download</button></a></td>
+                <td class="button-container"><a href="files/2022_file2.txt" download><button class="locked-btn">Download</button></a></td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td class="button-container"><a href="files/2023_file1.txt" download><button class="locked-btn">Download</button></a></td>
+                <td class="button-container"><a href="files/2023_file2.txt" download><button class="locked-btn">Download</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
