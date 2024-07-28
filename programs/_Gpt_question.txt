@@ -1,0 +1,13 @@
+Java program of finding if a string is palindrome.
+
+1. The problem statement with explanation.
+2.. The actual program in Java with comments.
+3. A short program description in a single paragraph.
+4. A table of input variable description ONLY:
+
+Format for input argument variable description:
+ column1: Name of the Variable
+ column2: Data  Type
+ column3: Purpose/Description
+ 
+ 

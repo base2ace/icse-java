@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../common/code.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<iframe src="..\common\banner.html" width="100%" height="110"></iframe>
+
+    <div class="container">
+        <!-- Section 1: Problem Statement -->
+        <section>
+            <h1>Write a program to reverse a given number.</h1>
+            <p>he reverse of a number is obtained by reversing the order of its digits. For example, if the input number is 12345, the reversed number would be 54321. This involves repeatedly extracting the last digit of the number and building a new number by shifting previously extracted digits to the left.</p>
+			<p>Number 12345: Reverse of 12345 is 54321.</p>
+			<p>Number 1000: Reverse of 1000 is 1 (leading zeros are omitted).</p>
+        </section>
+
+        <!-- Section 2: Java Program -->
+        <section>
+            <h2>Java Program</h2>
+            <pre>
+<code>
+import java.util.Scanner;
+
+public class ReverseNumber {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        // Initialize a variable to store the reverse of the number
+        int reverse = 0;
+
+        // Make a copy of the input number to preserve the original value
+        int temp = number;
+
+        // Loop to reverse the number
+        while (temp != 0) {
+            int lastDigit = temp % 10;  // Get the last digit of the number
+            reverse = reverse * 10 + lastDigit;  // Build the reversed number
+            temp /= 10;  // Remove the last digit from the number
+        }
+
+        // Print the reversed number
+        System.out.println("The reverse of " + number + " is " + reverse + ".");
+
+        // Close the scanner to free up resources
+        scanner.close();
+    }
+}
+
+</code>
+            </pre>
+        </section>
+
+        <!-- Section 3: Program Output -->
+        <section>
+            <h2>Output</h2>
+            <p>Here is an example of how the program is executed and the output it generates:</p>
+            <pre>
+<code>
+Enter a number: 12345
+The reverse of 12345 is 54321.
+</code>
+<code>
+Enter a number: 1000
+The reverse of 1000 is 1.
+</code>
+            </pre>
+
+        </section>
+
+        <!-- Section 4: Program Description -->
+        <section>
+            <h2>Solution Description</h2>
+            <p>This Java program reads an integer from the user and calculates its reverse by extracting its digits one at a time from the end using modulus and division operations. It constructs the reversed number by multiplying the current reverse by 10 and adding the last digit in each iteration, effectively shifting the previous digits to the left. The loop continues until all digits are processed. This method efficiently handles positive and negative numbers and outputs the reversed number, preserving the original sign.</p>
+        </section>
+
+        <!-- Section 5: Variable Description -->
+        <section>
+            <h2>Variable Description</h2>
+			<br>
+            <table class="variable-description">
+                <thead>
+                    <tr>
+                        <th>Name of the Variable</th>
+                        <th>Data Type</th>
+                        <th>Purpose/Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>number</td>
+                        <td>int</td>
+                        <td>Stores the number input by the user to be reversed..</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>	
+
+
+	<iframe src="..\common\footer.html" width="100%" height="70"></iframe>	
+</body>
+</html>
+

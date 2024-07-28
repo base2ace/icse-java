@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../common/code.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<iframe src="..\common\banner.html" width="100%" height="110"></iframe>
+
+    <div class="container">
+        <!-- Section 1: Problem Statement -->
+        <section>
+            <h1>Write a program to check whether the given number is a spy Number.</h1>
+            <p>A spy number is a number where the sum of its digits is equal to the product of its digits.</p>
+			<p>Sum of digits = Product of digits <br>
+				Consider the number 1124.<br>
+				The sum of its digits is 1+1+2+4=8<br>
+				The product of its digits is 1×1×2×4=8.<br>
+				Since the sum and the product are equal, 1124 is a spy number.
+			</p>
+        </section>
+
+        <!-- Section 2: Java Program -->
+        <section>
+            <h2>Java Program</h2>
+            <pre>
+<code>
+import java.util.Scanner;
+
+public class SpyNumberChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        // Initialize variables to store the sum and product of digits
+        int sumOfDigits = 0;
+        int productOfDigits = 1;
+        int temp = number; // Temporary variable to hold the original number
+
+        // Loop through each digit of the number
+        while (temp > 0) {
+            int digit = temp % 10; // Get the last digit of the number
+            sumOfDigits += digit;  // Add the digit to the sum
+            productOfDigits *= digit; // Multiply the digit to the product
+            temp /= 10; // Remove the last digit from the number
+        }
+
+        // Check if the number is a spy number
+        if (sumOfDigits == productOfDigits) {
+            System.out.println(number + " is a spy number.");
+        } else {
+            System.out.println(number + " is not a spy number.");
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+
+</code>
+            </pre>
+        </section>
+
+        <!-- Section 3: Program Output -->
+        <section>
+            <h2>Output</h2>
+            <p>Here is an example of how the program is executed and the output it generates:</p>
+            <pre>
+<code>
+Enter a number: 1124
+1124 is a spy number.
+</code>
+<code>
+Enter a number: 1234
+1234 is not a spy number.
+</code>
+            </pre>
+
+        </section>
+
+        <!-- Section 4: Program Description -->
+        <section>
+            <h2>Solution Description</h2>
+            <p>This Java program checks if a number is a spy number by calculating the sum and product of its digits. The program prompts the user to enter an integer, iterates through each digit to compute the sum and product, and then compares the results. If the sum and product are equal, the number is identified as a spy number; otherwise, it is not. The program efficiently uses a loop to extract digits by repeatedly taking the remainder and integer division by ten.</p>
+        </section>
+
+        <!-- Section 5: Variable Description -->
+        <section>
+            <h2>Variable Description</h2>
+			<br>
+            <table class="variable-description">
+                <thead>
+                    <tr>
+                        <th>Name of the Variable</th>
+                        <th>Data Type</th>
+                        <th>Purpose/Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>number</td>
+                        <td>int</td>
+                        <td>The number to be checked for a spy number.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>	
+
+
+	<iframe src="..\common\footer.html" width="100%" height="70"></iframe>	
+</body>
+</html>
+

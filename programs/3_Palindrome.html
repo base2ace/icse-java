@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../common/code.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<iframe src="..\common\banner.html" width="100%" height="110"></iframe>
+
+    <div class="container">
+        <!-- Section 1: Problem Statement -->
+        <section>
+            <h1>Write a program to check if a string is a Palindrome.</h1>
+            <p>A palindrome is a word, phrase, number, or sequence of characters that reads the same forward and backward, ignoring spaces, punctuation, and capitalization. In the context of this problem, we are focusing on strings. A string is considered a palindrome if it is identical when read from left to right and from right to left.</p>
+			<p>"racecar" is a palindrome because it reads the same backward as forward.</p>
+			<p>"madam" is a palindrome because it reads the same backward as forward.</p>
+        </section>
+
+        <!-- Section 2: Java Program -->
+        <section>
+            <h2>Java Program</h2>
+            <pre>
+<code>
+import java.util.Scanner;
+
+public class PalindromeChecker {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a string
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+
+        // Convert the input string to lowercase to make the palindrome check case-insensitive
+        String normalizedString = inputString.toLowerCase();
+
+        // Initialize variables to use as pointers
+        int left = 0;
+        int right = normalizedString.length() - 1;
+
+        // Flag to track whether the string is a palindrome
+        boolean isPalindrome = true;
+
+        // Loop to check characters from both ends of the string
+        while (left < right) {
+            // Check if the characters at left and right pointers are the same
+            if (normalizedString.charAt(left) != normalizedString.charAt(right)) {
+                isPalindrome = false; // Characters don't match, not a palindrome
+                break; // Exit the loop as we found a mismatch
+            }
+            // Move the pointers towards the center
+            left++;
+            right--;
+        }
+
+        // Print the result based on the palindrome check
+        if (isPalindrome) {
+            System.out.println(inputString + " is a palindrome.");
+        } else {
+            System.out.println(inputString + " is not a palindrome.");
+        }
+
+        // Close the scanner to free up resources
+        scanner.close();
+    }
+}
+
+
+</code>
+            </pre>
+        </section>
+
+        <!-- Section 3: Program Output -->
+        <section>
+            <h2>Output</h2>
+            <p>Here is an example of how the program is executed and the output it generates:</p>
+            <pre>
+<code>
+Enter a string: racecar
+racecar is a palindrome.
+</code>
+<code>
+Enter a string: hello
+hello is not a palindrome.
+</code>
+            </pre>
+
+        </section>
+
+        <!-- Section 4: Program Description -->
+        <section>
+            <h2>Solution Description</h2>
+            <p>This Java program checks if a given string is a palindrome by comparing characters from the beginning and end of the string moving towards the center. The program reads a string input from the user, converts it to lowercase to ensure case insensitivity, and then uses two pointers to iterate from both ends of the string towards the middle. It checks if the characters at these positions match, flagging the string as not a palindrome if any mismatch is found. If the string passes all character comparisons without mismatches, it is identified as a palindrome, and the result is displayed.</p>
+        </section>
+
+        <!-- Section 5: Variable Description -->
+        <section>
+            <h2>Variable Description</h2>
+			<br>
+            <table class="variable-description">
+                <thead>
+                    <tr>
+                        <th>Name of the Variable</th>
+                        <th>Data Type</th>
+                        <th>Purpose/Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>inputString</td>
+                        <td>String</td>
+                        <td>Stores the input string entered by the user to be checked for palindrome.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>	
+
+
+	<iframe src="..\common\footer.html" width="100%" height="70"></iframe>	
+</body>
+</html>
+
