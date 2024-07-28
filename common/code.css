@@ -73,6 +73,13 @@ button {
 .download-btn:hover {
 	background-color: #45a049;
 }
+
+.download-btn-disabled {
+	background-color: rgba(76, 175, 80, 0.5);
+	color: white;
+}
+
+
 .locked-btn {
 	background-color: #f44336;
 	color: white;

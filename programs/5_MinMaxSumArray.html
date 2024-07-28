@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../common/code.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<iframe src="..\common\banner.html" width="100%" height="110"></iframe>
+
+    <div class="container">
+        <!-- Section 1: Problem Statement -->
+        <section>
+            <h1>Write a program  that allows a user to input 20 integer elements into an array. Once the array is populated, the program should perform the following operations.</h1>
+            <p>1. Display the largest number from the array.</p>
+			<p>2. Display the smallest number from the array.</p>
+			<p>3. Display the sum of all the elements of the array.</p>
+        </section>
+
+        <!-- Section 2: Java Program -->
+        <section>
+            <h2>Java Program</h2>
+            <pre>
+<code>
+import java.util.Scanner;
+
+public class ArrayOperations {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Define the size of the array
+        final int SIZE = 20;
+
+        // Create an array to store the integer elements
+        int[] numbers = new int[SIZE];
+
+        // Prompt the user to input 20 integers
+        System.out.println("Enter " + SIZE + " integer elements:");
+
+        // Read elements into the array
+        for (int i = 0; i < SIZE; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        // Initialize variables for largest, smallest, and sum
+        int largest = numbers[0];
+        int smallest = numbers[0];
+        int sum = 0;
+
+        // Iterate over the array to find the largest, smallest, and calculate the sum
+        for (int i = 0; i < SIZE; i++) {
+            if (numbers[i] > largest) {
+                largest = numbers[i]; // Update largest if current element is greater
+            }
+            if (numbers[i] < smallest) {
+                smallest = numbers[i]; // Update smallest if current element is smaller
+            }
+            sum += numbers[i]; // Add current element to the sum
+        }
+
+        // Display the results
+        System.out.println("Largest number: " + largest);
+        System.out.println("Smallest number: " + smallest);
+        System.out.println("Sum of all elements: " + sum);
+
+        // Close the scanner to free up resources
+        scanner.close();
+    }
+}
+
+</code>
+            </pre>
+        </section>
+
+        <!-- Section 3: Program Output -->
+        <section>
+            <h2>Output</h2>
+            <p>Here is an example of how the program is executed and the output it generates:</p>
+            <pre>
+<code>
+Enter 20 integer elements:
+1 23 45 67 89 2 34 56 78 90 12 34 56 78 90 11 22 33 44 55
+
+Largest number: 90
+Smallest number: 1
+Sum of all elements: 945
+</code>
+<code>
+Enter 20 integer elements:
+-1 -2 -3 -4 -5 -6 -7 -8 -9 -10 -11 -12 -13 -14 -15 -16 -17 -18 -19 -20
+
+Largest number: -1
+Smallest number: -20
+Sum of all elements: -210
+</code>
+            </pre>
+
+        </section>
+
+        <!-- Section 4: Program Description -->
+        <section>
+            <h2>Solution Description</h2>
+            <p>This Java program reads 20 integer elements from the user into an array and performs three operations: finding the largest number, finding the smallest number, and calculating the sum of all elements. The program initializes the largest and smallest values using the first element of the array and iteratively updates these values as it processes each element. The sum of all elements is computed by adding each element to a cumulative sum variable. The results are displayed after all elements are processed. This approach efficiently calculates the desired results with a single pass through the array.</p>
+        </section>
+
+        <!-- Section 5: Variable Description -->
+        <section>
+            <h2>Variable Description</h2>
+			<br>
+            <table class="variable-description">
+                <thead>
+                    <tr>
+                        <th>Name of the Variable</th>
+                        <th>Data Type</th>
+                        <th>Purpose/Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>number</td>
+                        <td>int[]</td>
+                        <td>Stores the array of 20 integer elements input by the user.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>	
+
+
+	<iframe src="..\common\footer.html" width="100%" height="70"></iframe>	
+</body>
+</html>
+

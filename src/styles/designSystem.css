@@ -69,6 +69,18 @@
   padding: 10px 40px;
 }
 
+.white-btn-disabled,
+.dark-btn-disabled{
+  color: var(--color-white-100);
+  background-color: var(--color-green-50);
+  cursor: pointer;
+  font-size: var(--h5);
+  font-family: var(--font-2);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 40px;
+}
+
 .dark-btn{
   color: var(--color-white-100);
   background-color: var(--color-green-100);

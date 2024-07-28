@@ -34,6 +34,15 @@ margin-top: 20px;
   color: var(--color-green-100);
 }
 
+.sectionOne__content__wws--text{
+  font-family: var(--font-2);
+  font-size: var(--sub);
+  font-weight: bold;
+  color: var(--color-wws-100);
+}
+
+
+
 .sectionOne__logo{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -50,7 +59,7 @@ margin-top: 20px;
 
 .sectionTwo__right--text,
 .sectionThree__left--text{
-  color: var(--color-dark-50);
+  color: var(--color-wws-100);
   font-family: var(--font-2);
   font-size: var(--body);
 }
@@ -61,6 +70,17 @@ margin-top: 20px;
   margin-top: 15px;
 }
 
+.section__center--btn{
+  align-self: center;
+  margin-top: 15px;
+}
+
+.section__center__disabled--btn{
+  align-self: center;
+  margin-top: 15px;
+background-color: rgba(76, 175, 80, 0.5);
+color: white;
+}
 
 /**
 *! style rule for sectionFour
