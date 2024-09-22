@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="src/images/Logo/b2a_logo.png">
-  <title> Base2Ace Academy - Coding</title>
+  <title> Base2Ace Academy - ICSE</title>
   <link rel="stylesheet" href="src/styles/designSystem.css">
   <link rel="stylesheet" href="src/styles/index.css">
 </head>
@@ -20,8 +20,8 @@
       </div>
       <div class="navbar__menu hidden">
         <a href="index.html" class="navbar__menu--1">Home</a>
-        <a href="portfolio.html" class="navbar__menu--2">Portfolio</a>
-        <a href="service.html" class="navbar__menu--3">Service</a>
+        <a href="course_explore.html"  target="_blank" class="navbar__menu--2">Course</a>
+        <a href="./programs/AllPrograms.html"  target="_blank" class="navbar__menu--3">Programs</a>
         <a href="contact.html" class="navbar__menu--4">Contact</a>
       </div>
       <div class="navbar__icon">
@@ -34,13 +34,15 @@
 	
 	  <script>
         function openSyllabusPage() {
-            window.open("https://cisce.org/regulations-and-syllabuses-2025/", "_blank");
+            <!-- window.open("https://cisce.org/regulations-and-syllabuses-2025/", "_blank"); -->
+            window.open("https://cisce.org/wp-content/uploads/2024/01/21.-ICSE-Computer-Applications_25.pdf", "_blank");
         }
 		function open_b2a_dot_comPage() {
             window.open("https://base2ace.com", "_blank");
         }
         function course_explore() {
-            window.location.href = 'course_explore.html'; 
+			window.open("course_explore.html", "_blank");
+            <!-- window.location.href = 'course_explore.html';  -->
         }
 		function openAllProgramsPage() {
 			window.open("./programs/AllPrograms.html", "_blank");
@@ -55,9 +57,8 @@
 		
 	
       <div class="header__left flex">
-        <div class="header__left--label label text-white">welcome</div>
         <div class="header__left--title common-title text-white">Comprehensive Java Crash Course for Std 10 (ICSE)</div>
-        <div class="header__left--text">Specially designed for class 10 ICSE students. Course covers the complete Computer Science syllabus. Emphasis on hands on programming as it comprises of 60% of the total marks. Get exam ready!</div>
+        <div class="header__left--text">Specifically designed for class 10 ICSE students. Course covers the complete Computer Science syllabus. Emphasis on hands on programming as it comprises of 60% of the total marks. Get exam ready!</div>
         <button class="header__left--btn white-btn"  onclick="course_explore()">Register Now.</button>
       </div>
       <img src="src/images/Home/image-1.svg" alt="" class="header__right responsive-image">
