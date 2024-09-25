@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../common/code.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<iframe src="..\common\banner.html" width="100%" height="110"></iframe>
+
+    <div class="container">
+        <!-- Section 1: Problem Statement -->
+        <section>
+            <h1>Write a program for Linear Search in Java.</h1>
+            <p>1. The program should accept an array of integers.</p>
+			<p>2. Accept a target value to be searched.</p>
+			<p>3. Displays Found if the number is found in the array. Print Not Found otherwise.</p>
+        </section>
+
+        <!-- Section 2: Java Program -->
+        <section>
+            <h2>Java Program</h2>
+            <pre>
+<code>
+import java.util.Scanner;
+
+public class LinearSearch {
+
+    // Method to perform linear search
+    public static int linearSearch(int[] array, int target) {
+        // Loop through the array to find the target
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == target) {
+                return i; // Return the index if target is found
+            }
+        }
+        return -1; // Return -1 if target is not found
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompt user for the number of elements in the array
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();  // Size of the array
+
+        // Initialize the array
+        int[] array = new int[n];
+
+        // Input elements into the array
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();  // Element input
+        }
+
+        // Input the target value to search for
+        System.out.print("Enter the target value to search: ");
+        int target = scanner.nextInt();
+
+        // Call the linearSearch method
+        int result = linearSearch(array, target);
+
+        // Output the result
+        if (result != -1) {
+            System.out.println("Target " + target + " found at index: " + result);
+        } else {
+            System.out.println("Target " + target + " not found in the array.");
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+</code>
+            </pre>
+        </section>
+
+        <!-- Section 3: Program Output -->
+        <section>
+            <h2>Output</h2>
+            <p>Here is an example of how the program is executed and the output it generates:</p>
+            <pre>
+<code>
+Enter the number of elements in the array: 5
+Enter the elements of the array:
+10
+25
+30
+45
+50
+Enter the target value to search: 30
+Target 30 found at index: 2
+</code>
+<code>
+Enter the number of elements in the array: 4
+Enter the elements of the array:
+5
+15
+25
+35
+Enter the target value to search: 20
+Target 20 not found in the array.
+</code>
+            </pre>
+
+        </section>
+
+        <!-- Section 4: Program Description -->
+        <section>
+            <h2>Solution Description</h2>
+            <p>The Java program implements a linear search algorithm. It prompts the user to input the number of elements in an array, followed by the elements themselves, and then asks for a target value to search. The program uses a for loop to iterate through each element of the array, comparing each one with the target value. If a match is found, it prints the index of the element. If no match is found, it indicates that the target is not present in the array. The search complexity for linear search is O(n), where n is the number of elements in the array.</p>
+        </section>
+
+        <!-- Section 5: Variable Description -->
+        <section>
+            <h2>Variable Description</h2>
+			<br>
+            <table class="variable-description">
+                <thead>
+                    <tr>
+                        <th>Name of the Variable</th>
+                        <th>Data Type</th>
+                        <th>Purpose/Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>array</td>
+                        <td>int[]</td>
+                        <td>An array that stores the input values provided by the user.</td>
+                    </tr
+					<tr>
+                        <td>target</td>
+                        <td>int</td>
+                        <td>The value to be searched within the array.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>	
+
+
+	<iframe src="..\common\footer.html" width="100%" height="70"></iframe>	
+</body>
+</html>
+
