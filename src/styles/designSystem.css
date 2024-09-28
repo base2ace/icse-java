@@ -155,14 +155,6 @@
   font-weight: bold;
 }
 
-.navbar__logo--sub-text{
-  font-size: var(--h3);
-  font-family: var(--font-2);
-  font-weight: 100;
-  color: var(--color-white-100);
-  padding: 0 400px ;
-}
-
 .navbar__menu{
   display: flex;
   direction: row;
@@ -234,8 +226,8 @@ background-color: var(--color-wws-100);
 }
 
 .footerLinks{
-  display: flex;
-  flex-direction: row;
+  /* display: flex; */
+  /* flex-direction: row; */
   justify-content: space-between;
   padding: 40px 0;
 }
