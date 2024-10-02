@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../common/code.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<iframe src="..\common\banner.html" width="100%" height="110"></iframe>
+
+    <div class="container">
+        <!-- Section 1: Problem Statement -->
+        <section>
+            <h1>Design a class RailwayTicket with following description.</h1>
+            <h3>Instance variables/data members.</h3>
+            <p> String name : To store the name of the customer.</p>
+			<p> String coach : To store the type of coach customer wants to travel.</p>
+			<p> long mobno : To store customer’s mobile number.</p>
+			<p> int amt : To store basic amount of ticket.</p>
+			<p> int totalamt : To store the amount to be paid after updating the original amount.</p>
+            <h3>Member methods :</h3>
+            <p> void accept () – To take input for name, coach, mobile number and amount.</p>
+			<p> void update() – To update the amount as per the coach selected.</p>
+			<p> extra amount to be added in the amount as follows)</p>
+            <h3>Type of Coaches Amount</h3>
+            <p> First_AC = 700</p>
+			<p> Second_AC = 500</p>
+            <p> Third_AC = 250</p>
+			<p> sleeper = None</p>
+			<p> void display() – To display all details of a customer such as name, coach, total amount and mobile number.</p>
+			<p> Write a main method to create an object of the class and call the above member methods.</p>
+			
+        </section>
+
+        <!-- Section 2: Java Program -->
+        <section>
+            <pre>
+<code>
+import java.util.Scanner;
+
+class RailwayTicket {
+    // Instance variables
+    private String name;
+    private String coach;
+    private long mobno;
+    private int amt;
+    private int totalamt;
+
+    // Method to accept details from the user
+    public void accept() {
+        Scanner sc = new Scanner(System.in);
+
+        // Input name, coach, mobile number, and amount
+        System.out.print("Enter name: ");
+        name = sc.nextLine();
+        System.out.print("Enter coach (First_AC/Second_AC/Third_AC/sleeper): ");
+        coach = sc.nextLine();
+        System.out.print("Enter mobile number: ");
+        mobno = sc.nextLong();
+        System.out.print("Enter basic amount of ticket: ");
+        amt = sc.nextInt();
+
+        // Initialize total amount to the base amount initially
+        totalamt = amt;
+    }
+
+    // Method to update the total amount based on the type of coach
+    public void update() {
+        // Add extra charges based on the selected coach
+        switch (coach) {
+            case "First_AC":
+                totalamt += 700; // Add Rs. 700 for First_AC
+                break;
+            case "Second_AC":
+                totalamt += 500; // Add Rs. 500 for Second_AC
+                break;
+            case "Third_AC":
+                totalamt += 250; // Add Rs. 250 for Third_AC
+                break;
+            case "sleeper":
+                // No extra charge for sleeper class
+                break;
+            default:
+                System.out.println("Invalid coach type selected!");
+                break;
+        }
+    }
+
+    // Method to display the ticket details
+    public void display() {
+        System.out.println("Customer Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Coach: " + coach);
+        System.out.println("Mobile Number: " + mobno);
+        System.out.println("Total Amount to be Paid: Rs. " + totalamt);
+    }
+
+    // Main method to test the class
+    public static void main(String[] args) {
+        // Create object of RailwayTicket class
+        RailwayTicket ticket = new RailwayTicket();
+
+        // Call the member methods
+        ticket.accept();  // Take input from the user
+        ticket.update();  // Update the amount based on the coach type
+        ticket.display(); // Display the ticket details
+    }
+}
+</code>
+            </pre>
+        </section>
+
+        <!-- Section 3: Program Output -->
+        <section>
+            <h2>Output</h2>
+            <p>Here is an example of how the program is executed and the output it generates:</p>
+            <pre>
+<code>
+Enter name: John Doe
+Enter coach (First_AC/Second_AC/Third_AC/sleeper): First_AC
+Enter mobile number: 9876543210
+Enter basic amount of ticket: 1000
+
+Customer Details:
+Name: John Doe
+Coach: First_AC
+Mobile Number: 9876543210
+Total Amount to be Paid: Rs. 1700
+</code>
+            </pre>
+        </section>
+    </div>	
+
+	<iframe src="..\common\footer.html" width="100%" height="70"></iframe>	
+</body>
+</html>
+
