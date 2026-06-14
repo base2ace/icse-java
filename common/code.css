@@ -18,7 +18,7 @@ section {
 pre {
 	background-color: #f4f4f4;
 	padding: 15px;
-	border-left: 5px solid #4d3275;
+	border-left: 5px solid #27AE60;
 	overflow-x: auto;
 	white-space: pre-wrap; /* Allows text to wrap */
 }
@@ -29,7 +29,7 @@ table {
 }
 
 table, th, td {
-	border: 2px solid #4d3275;
+	border: 2px solid #122C3D;
 	padding: 10px;
 	text-align: left;
 }
@@ -39,7 +39,7 @@ th {
 }
 
 .variable-description th {
-	background-color:rgba(77, 50, 117, 0.50);
+	background-color:rgba(18, 44, 61, 0.50);
 	text-align: center;
 	
 }
@@ -55,7 +55,7 @@ h1, h2 {
   margin: 0;
   padding: 0;
   font-size: 30px;
-  color:#4d3275;
+  color:#122C3D;
 }
 
 button {
@@ -67,15 +67,15 @@ button {
 	font-weight: bold;
 }
 .download-btn {
-	background-color: #4CAF50;
+	background-color: #27AE60;
 	color: white;
 }
 .download-btn:hover {
-	background-color: #45a049;
+	background-color: #219653;
 }
 
 .download-btn-disabled {
-	background-color: rgba(76, 175, 80, 0.5);
+	background-color: rgba(39, 174, 96, 0.5);
 	color: white;
 }
 

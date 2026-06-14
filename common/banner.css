@@ -4,7 +4,7 @@ body {
 }
 
 .banner {
-    background-color: #4d3275;
+    background-color: #122C3D;
     color: white;
     padding: 30px 0;
     position: relative;
@@ -51,7 +51,7 @@ body {
 }
 
 .banner-nav a:hover {
-    color: #d3cce3; /* Lighter shade of the banner color */
+    color: #27AE60;
 }
 
 main {
@@ -61,7 +61,7 @@ main {
 footer {
     text-align: center;
     padding: 5px;
-    background-color: #4d3275;
+    background-color: #122C3D;
     color: white;
 }
 

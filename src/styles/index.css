@@ -78,7 +78,7 @@ margin-top: 20px;
 .section__center__disabled--btn{
   align-self: center;
   margin-top: 15px;
-background-color: rgba(76, 175, 80, 0.5);
+background-color: rgba(39, 174, 96, 0.5);
 color: white;
 }
 
@@ -180,7 +180,7 @@ th, td {
 	text-align: center;
 }
 th {
-	background-color: #4d3275;
+	background-color: #122C3D;
 	color: white;
 }
 td {
@@ -198,11 +198,11 @@ button {
 	font-weight: bold;
 }
 .download-btn {
-	background-color: #4CAF50;
+	background-color: #27AE60;
 	color: white;
 }
 .download-btn:hover {
-	background-color: #45a049;
+	background-color: #219653;
 }
 .locked-btn {
 	background-color: #f44336;
