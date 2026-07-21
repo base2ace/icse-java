@@ -18,8 +18,8 @@ body {
 }
 
 .banner-content {
-    width: 90%;
-    max-width: 1200px;
+    width: 94%;
+    max-width: 1540px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,5 +63,9 @@ footer {
     padding: 5px;
     background-color: #122C3D;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 

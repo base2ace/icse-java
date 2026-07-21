@@ -1,0 +1,291 @@
+/* ==========================================================================
+   Base2ace Technologies - ICSE 10 Java
+   Site Visitor Counter & Traffic Analytics Component Styles
+   ========================================================================== */
+
+/* Glowing Live Dot Animation */
+.visitor-live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #27ae60;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px #27ae60;
+  animation: pulseGreen 1.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  vertical-align: middle;
+}
+
+@keyframes pulseGreen {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 8px #27ae60;
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+    box-shadow: 0 0 2px #27ae60;
+  }
+}
+
+/* Nav Visitor Count Button */
+.nav-visitor-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(18, 44, 61, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: var(--font-nav, "Raleway", sans-serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  outline: none;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.nav-visitor-btn:hover {
+  background: rgba(39, 174, 96, 0.9);
+  border-color: #27ae60;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.35);
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+.nav-visitor-btn strong {
+  font-weight: 700;
+  color: #64ffda;
+}
+
+/* Footer Visitor Badge */
+.footer-visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  color: #ffffff;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0.65rem auto 0 auto;
+}
+
+.footer-visitor-counter:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.visitor-footer-tag {
+  color: #d1d5db;
+  font-size: 0.78rem;
+}
+
+/* Modal Overlay & Card */
+.visitor-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  padding: 1rem;
+}
+
+.visitor-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.visitor-modal-card {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 540px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(39, 174, 96, 0.15);
+  color: #f9fafb;
+  font-family: var(--font-1, "Nunito Sans", sans-serif);
+  position: relative;
+  transform: scale(0.95);
+  transition: transform 0.25s ease;
+}
+
+.visitor-modal-overlay.active .visitor-modal-card {
+  transform: scale(1);
+}
+
+.visitor-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.visitor-modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.visitor-modal-close {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.visitor-modal-close:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Analytics Grid Inside Modal */
+.visitor-analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.visitor-stat-box {
+  background: rgba(31, 41, 55, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.visitor-stat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(39, 174, 96, 0.15);
+  border: 1px solid rgba(39, 174, 96, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.visitor-stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.visitor-stat-lbl {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+}
+
+.visitor-stat-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: monospace, sans-serif;
+  line-height: 1.2;
+}
+
+/* Details Table */
+.visitor-details-table {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.visitor-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visitor-detail-label {
+  color: #9ca3af;
+}
+
+.visitor-detail-val {
+  color: #e5e7eb;
+  font-family: monospace, sans-serif;
+  font-size: 0.82rem;
+}
+
+.visitor-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(39, 174, 96, 0.15);
+  border: 1px solid rgba(39, 174, 96, 0.3);
+  color: #4ade80;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.visitor-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.visitor-btn-close {
+  background: #27ae60;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.visitor-btn-close:hover {
+  background: #219653;
+}
+
+@media (max-width: 480px) {
+  .visitor-analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
